@@ -24,11 +24,11 @@ import getopt
 
 # Shadow JSON schema:
 #
-# Name: Bot
+# Name: jio2
 # {
 #	"state": {
 #		"desired":{
-#			"property":<INT VALUE>
+#			"active":<INT VALUE>
 #		}
 #	}
 #}
@@ -181,8 +181,6 @@ else:
 print("state number = ",state)
 
 # Update shadow 
-#jbShadow.shadowDelete(customShadowCallback_Delete, 5)
 JSONPayload = '{"state":{"desired":{"active":' + str(state) + '}}}'
-#JSONPayload = '{"state":{"desired":{"property":'+str(state)+'"active":' + str("on")' + '}}}'
 jbShadow.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
 time.sleep(1)
