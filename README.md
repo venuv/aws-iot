@@ -1,8 +1,8 @@
 # aws-iot-python
-Experiments with the [Python AWS IoT SDK](https://github.com/aws/aws-iot-device-sdk-python), and [Boto3](https://boto3.readthedocs.io/en/latest/) which spans AWS and AWS IoT, and bridges between the two
+Experiments with the [Python AWS IoT SDK](https://github.com/aws/aws-iot-device-sdk-python), and [Boto3](https://boto3.readthedocs.io/en/latest/) which spans AWS and AWS IoT, and bridges between the two.
 
 * jbActivate.py - tests Python IoT SDK to use  MQTT to update a device shadow. Invoked as
->_python jb_activate.py -e <endpoint> -r <rootCAFilePath> -c <certFilePath> -k <privateKeyFilePath> -i <thingId> -s <desiredThingState>_
+>_python jb_activate.py -e \<endpoint\> -r \<rootCAFilePath\> -c \<certFilePath\> -k \<privateKeyFilePath\> -i \<thingId\> -s \<desiredThingState\>_
 
 * active_registry.py - tests a Boto3 script (that can then be used as Lambdas, and behind an API gateway) to invoke IoT operations by publishing to 'system' topics (preceded by a $ sign, such as $aws/things/jio2/shadow/update) that perform REST operations on shadows
 
